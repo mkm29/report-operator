@@ -3,9 +3,11 @@
 This operator simply watched for `VulnerabilityReport` CRDs (already created by the `trivy` operator) and uploads all reports to an S3 bucket.
 
 ## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+
+Because this relies on CRDs already provided by Aqua Security, no need to define/install them here. You need to first install the `trivy-operator`, which can be found [here](https://github.com/aquasecurity/trivy-operator). Once the `trivy-operator` is installed, you can install this operator. 
 
 ## Getting Started
+
 You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster.
 **Note:** Your controller will automatically use the current context in your kubeconfig file (i.e. whatever cluster `kubectl cluster-info` shows).
 
