@@ -53,7 +53,7 @@ func (c *AWSClient) Upload(key string, value interface{}) error {
 	}
 
 	// marshall value into byte string
-	p, err := json.Marshal(value)
+	p, err := json.MarshalIndent(value, "", "  ")
 	if err != nil {
 		log.Fatal(err)
 		return err

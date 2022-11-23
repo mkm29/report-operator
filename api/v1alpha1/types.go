@@ -48,3 +48,29 @@ type Scanner struct {
 	// Version the version of the scanner.
 	Version string `json:"version"`
 }
+
+type SnykCvssDetails struct {
+	Assigner        string  `deepcopier:"assigner"`
+	Severity        string  `deepcopier:"severity"`
+	CvssV3Vector    string  `deepcopier:"V3Vector"`
+	CvssV3BaseScore float64 `deepcopier:"V3Score"`
+}
+
+type SnykVulnerability struct {
+	ID          string            `deepcopier:"vulnerabilityID"`
+	Title       string            `deepcopier:"title"`
+	CVSSv3      float64           `deepcopier:"score"`
+	CvssDetails []SnykCvssDetails `deepcopier:"cvss.nvd"`
+	Description string            `deepcopier:"description"`
+	Severity    Severity          `deepcopier:"severity"`
+	Language    string            `deepcopier:"language"`
+	Package     string            `deepcopier:"package"`
+	Version     string            `deepcopier:"version"`
+	FixedIn     string            `deepcopier:"fixedIn"`
+	References  []string          `deepcopier:"links"`
+}
+
+type SnykReport struct {
+	// Vulnerabilities is a list of vulnerabilities found in the scanned image.
+	Vulnerabilities []SnykVulnerability `deepcopier:"vulnerabilities"`
+}
