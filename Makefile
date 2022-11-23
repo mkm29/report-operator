@@ -57,6 +57,9 @@ DOCKER_PASSWORD ?= $(shell cat ~/.docker/config.json | jq -r '.auths["https://in
 DOCKER_REGISTRY ?= localhost:5000
 #docker.io
 
+# ECR credentials
+ECR_PROFILE ?= test-ecr-profile
+
 # Get the currently used golang install path (in GOPATH/bin, unless GOBIN is set)
 ifeq (,$(shell go env GOBIN))
 GOBIN=$(shell go env GOPATH)/bin
@@ -139,6 +142,10 @@ docker-push: ## Push docker image with the manager.
 .PHONY: docker-login
 docker-login: ## Login to docker registry
 	docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD} ${DOCKER_REGISTRY}
+
+.PHONY: ecr-login
+ecr-login: ## Login to ECR
+	aws ecr get-login-password --region ${DOCKER_REGISTRY} --profile ${ECR_PROFILE} | docker login --username AWS --password-stdin ${DOCKER_REGISTRY}
 
 # PLATFORMS defines the target platforms for  the manager image be build to provide support to multiple
 # architectures. (i.e. make docker-buildx IMG=myregistry/mypoperator:0.0.1). To use this option you need to:
