@@ -1,0 +1,1620 @@
+apiVersion: aquasecurity.github.io/v1alpha1
+kind: VulnerabilityReport
+metadata:
+  annotations:
+    trivy-operator.aquasecurity.github.io/report-ttl: 24h0m0s
+  creationTimestamp: "2022-11-19T19:56:36Z"
+  generation: 1
+  labels:
+    resource-spec-hash: 7cb57878bb
+    trivy-operator.container.name: nginx
+    trivy-operator.resource.kind: ReplicaSet
+    trivy-operator.resource.name: example-foo-5897b787b4
+    trivy-operator.resource.namespace: default
+  name: replicaset-example-foo-5897b787b4-nginx
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: false
+    controller: true
+    kind: ReplicaSet
+    name: example-foo-5897b787b4
+    uid: 1f33b645-8f29-481f-b187-c03ba121662f
+  resourceVersion: "12864934"
+  uid: fc57050c-695e-4114-a81a-c6011aea6e68
+report:
+  artifact:
+    repository: library/nginx
+    tag: latest
+  registry:
+    server: index.docker.io
+  scanner:
+    name: Trivy
+    vendor: Aqua Security
+    version: 0.33.0
+  summary:
+    criticalCount: 3
+    highCount: 16
+    lowCount: 93
+    mediumCount: 29
+    noneCount: 0
+    unknownCount: 0
+  updateTimestamp: "2022-11-19T19:56:36Z"
+  vulnerabilities:
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.2.4
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2011-3374
+    resource: apt
+    score: 3.7
+    severity: LOW
+    target: ""
+    title: It was found that apt-key in apt, all versions, do not correctly valid
+      ...
+    vulnerabilityID: CVE-2011-3374
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 5.1-2+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-3715
+    resource: bash
+    score: 5.5
+    severity: MEDIUM
+    target: ""
+    title: 'bash: a heap-buffer-overflow in valid_parameter_transform'
+    vulnerabilityID: CVE-2022-3715
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.36.1-8+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-0563
+    resource: bsdutils
+    score: 5.5
+    severity: LOW
+    target: ""
+    title: 'util-linux: partial disclosure of arbitrary files in chfn and chsh when
+      compiled with libreadline'
+    vulnerabilityID: CVE-2022-0563
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 8.32-4
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2016-2781
+    resource: coreutils
+    score: 8.6
+    severity: LOW
+    target: ""
+    title: 'coreutils: Non-privileged session can escape to the parent session in
+      chroot'
+    vulnerabilityID: CVE-2016-2781
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 8.32-4
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2017-18018
+    resource: coreutils
+    score: 4.2
+    severity: LOW
+    target: ""
+    title: 'coreutils: race condition vulnerability in chown and chgrp'
+    vulnerabilityID: CVE-2017-18018
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 7.74.0-1.3+deb11u3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-42916
+    resource: curl
+    score: 7.5
+    severity: HIGH
+    target: ""
+    title: 'curl: HSTS bypass via IDN'
+    vulnerabilityID: CVE-2022-42916
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 7.74.0-1.3+deb11u3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-32221
+    resource: curl
+    score: 4.8
+    severity: MEDIUM
+    target: ""
+    title: 'curl: POST following PUT confusion'
+    vulnerabilityID: CVE-2022-32221
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 7.74.0-1.3+deb11u3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-22922
+    resource: curl
+    score: 6.5
+    severity: LOW
+    target: ""
+    title: 'curl: Content not matching hash in Metalink is not being discarded'
+    vulnerabilityID: CVE-2021-22922
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 7.74.0-1.3+deb11u3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-22923
+    resource: curl
+    score: 5.7
+    severity: LOW
+    target: ""
+    title: 'curl: Metalink download sends credentials'
+    vulnerabilityID: CVE-2021-22923
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.46.2-2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-1304
+    resource: e2fsprogs
+    score: 5.8
+    severity: HIGH
+    target: ""
+    title: 'e2fsprogs: out-of-bounds read/write via crafted filesystem'
+    vulnerabilityID: CVE-2022-1304
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.2.4
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2011-3374
+    resource: libapt-pkg6.0
+    score: 3.7
+    severity: LOW
+    target: ""
+    title: It was found that apt-key in apt, all versions, do not correctly valid
+      ...
+    vulnerabilityID: CVE-2011-3374
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.36.1-8+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-0563
+    resource: libblkid1
+    score: 5.5
+    severity: LOW
+    target: ""
+    title: 'util-linux: partial disclosure of arbitrary files in chfn and chsh when
+      compiled with libreadline'
+    vulnerabilityID: CVE-2022-0563
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.31-13+deb11u5
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2010-4756
+    resource: libc-bin
+    severity: LOW
+    target: ""
+    title: 'glibc: glob implementation can cause excessive CPU and memory consumption
+      due to crafted glob expressions'
+    vulnerabilityID: CVE-2010-4756
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.31-13+deb11u5
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2018-20796
+    resource: libc-bin
+    score: 5.3
+    severity: LOW
+    target: ""
+    title: 'glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1
+      in posix/regexec.c'
+    vulnerabilityID: CVE-2018-20796
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.31-13+deb11u5
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2019-1010022
+    resource: libc-bin
+    score: 9.8
+    severity: LOW
+    target: ""
+    title: 'glibc: stack guard protection bypass'
+    vulnerabilityID: CVE-2019-1010022
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.31-13+deb11u5
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2019-1010023
+    resource: libc-bin
+    score: 7.8
+    severity: LOW
+    target: ""
+    title: 'glibc: running ldd on malicious ELF leads to code execution because of
+      wrong size computation'
+    vulnerabilityID: CVE-2019-1010023
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.31-13+deb11u5
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2019-1010024
+    resource: libc-bin
+    score: 5.3
+    severity: LOW
+    target: ""
+    title: 'glibc: ASLR bypass using cache of thread stack and heap'
+    vulnerabilityID: CVE-2019-1010024
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.31-13+deb11u5
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2019-1010025
+    resource: libc-bin
+    score: 2.9
+    severity: LOW
+    target: ""
+    title: 'glibc: information disclosure of heap addresses of pthread_created thread'
+    vulnerabilityID: CVE-2019-1010025
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.31-13+deb11u5
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2019-9192
+    resource: libc-bin
+    score: 2.8
+    severity: LOW
+    target: ""
+    title: 'glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1
+      in posix/regexec.c'
+    vulnerabilityID: CVE-2019-9192
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.31-13+deb11u5
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2010-4756
+    resource: libc6
+    severity: LOW
+    target: ""
+    title: 'glibc: glob implementation can cause excessive CPU and memory consumption
+      due to crafted glob expressions'
+    vulnerabilityID: CVE-2010-4756
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.31-13+deb11u5
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2018-20796
+    resource: libc6
+    score: 5.3
+    severity: LOW
+    target: ""
+    title: 'glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1
+      in posix/regexec.c'
+    vulnerabilityID: CVE-2018-20796
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.31-13+deb11u5
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2019-1010022
+    resource: libc6
+    score: 9.8
+    severity: LOW
+    target: ""
+    title: 'glibc: stack guard protection bypass'
+    vulnerabilityID: CVE-2019-1010022
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.31-13+deb11u5
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2019-1010023
+    resource: libc6
+    score: 7.8
+    severity: LOW
+    target: ""
+    title: 'glibc: running ldd on malicious ELF leads to code execution because of
+      wrong size computation'
+    vulnerabilityID: CVE-2019-1010023
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.31-13+deb11u5
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2019-1010024
+    resource: libc6
+    score: 5.3
+    severity: LOW
+    target: ""
+    title: 'glibc: ASLR bypass using cache of thread stack and heap'
+    vulnerabilityID: CVE-2019-1010024
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.31-13+deb11u5
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2019-1010025
+    resource: libc6
+    score: 2.9
+    severity: LOW
+    target: ""
+    title: 'glibc: information disclosure of heap addresses of pthread_created thread'
+    vulnerabilityID: CVE-2019-1010025
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.31-13+deb11u5
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2019-9192
+    resource: libc6
+    score: 2.8
+    severity: LOW
+    target: ""
+    title: 'glibc: uncontrolled recursion in function check_dst_limits_calc_pos_1
+      in posix/regexec.c'
+    vulnerabilityID: CVE-2019-9192
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.46.2-2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-1304
+    resource: libcom-err2
+    score: 5.8
+    severity: HIGH
+    target: ""
+    title: 'e2fsprogs: out-of-bounds read/write via crafted filesystem'
+    vulnerabilityID: CVE-2022-1304
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 7.74.0-1.3+deb11u3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-42916
+    resource: libcurl4
+    score: 7.5
+    severity: HIGH
+    target: ""
+    title: 'curl: HSTS bypass via IDN'
+    vulnerabilityID: CVE-2022-42916
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 7.74.0-1.3+deb11u3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-32221
+    resource: libcurl4
+    score: 4.8
+    severity: MEDIUM
+    target: ""
+    title: 'curl: POST following PUT confusion'
+    vulnerabilityID: CVE-2022-32221
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 7.74.0-1.3+deb11u3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-22922
+    resource: libcurl4
+    score: 6.5
+    severity: LOW
+    target: ""
+    title: 'curl: Content not matching hash in Metalink is not being discarded'
+    vulnerabilityID: CVE-2021-22922
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 7.74.0-1.3+deb11u3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-22923
+    resource: libcurl4
+    score: 5.7
+    severity: LOW
+    target: ""
+    title: 'curl: Metalink download sends credentials'
+    vulnerabilityID: CVE-2021-22923
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 5.3.28+dfsg1-0.8
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2019-8457
+    resource: libdb5.3
+    score: 7.5
+    severity: CRITICAL
+    target: ""
+    title: 'sqlite: heap out-of-bound read in function rtreenode()'
+    vulnerabilityID: CVE-2019-8457
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.2.10-2+deb11u5
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2013-0340
+    resource: libexpat1
+    severity: LOW
+    target: ""
+    title: 'expat: internal entity expansion'
+    vulnerabilityID: CVE-2013-0340
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.46.2-2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-1304
+    resource: libext2fs2
+    score: 5.8
+    severity: HIGH
+    target: ""
+    title: 'e2fsprogs: out-of-bounds read/write via crafted filesystem'
+    vulnerabilityID: CVE-2022-1304
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.10.4+dfsg-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-31782
+    resource: libfreetype6
+    score: 7.8
+    severity: LOW
+    target: ""
+    title: ftbench.c in FreeType Demo Programs through 2.12.1 has a heap-based bu
+      ...
+    vulnerabilityID: CVE-2022-31782
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.8.7-6
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-33560
+    resource: libgcrypt20
+    score: 7.5
+    severity: HIGH
+    target: ""
+    title: 'libgcrypt: mishandles ElGamal encryption because it lacks exponent blinding
+      to address a side-channel attack against mpi_powm'
+    vulnerabilityID: CVE-2021-33560
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.8.7-6
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2018-6829
+    resource: libgcrypt20
+    score: 5.3
+    severity: LOW
+    target: ""
+    title: 'libgcrypt: ElGamal implementation doesn''t have semantic security due
+      to incorrectly encoded plaintexts possibly allowing to obtain sensitive information'
+    vulnerabilityID: CVE-2018-6829
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.3.0-2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-38115
+    resource: libgd3
+    score: 6.5
+    severity: MEDIUM
+    target: ""
+    title: read_header_tga in gd_tga.c in the GD Graphics Library (aka LibGD) thr
+      ...
+    vulnerabilityID: CVE-2021-38115
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.3.0-2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-40812
+    resource: libgd3
+    score: 6.5
+    severity: MEDIUM
+    target: ""
+    title: The GD Graphics Library (aka LibGD) through 2.3.2 has an out-of-bounds
+      ...
+    vulnerabilityID: CVE-2021-40812
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.3.0-2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-40145
+    resource: libgd3
+    score: 7.5
+    severity: LOW
+    target: ""
+    title: '** DISPUTED ** gdImageGd2Ptr in gd_gd2.c in the GD Graphics Library (a
+      ...'
+    vulnerabilityID: CVE-2021-40145
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 3.7.1-5+deb11u2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2011-3389
+    resource: libgnutls30
+    severity: LOW
+    target: ""
+    title: 'HTTPS: block-wise chosen-plaintext attack against SSL/TLS (BEAST)'
+    vulnerabilityID: CVE-2011-3389
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.18.3-6+deb11u2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-42898
+    resource: libgssapi-krb5-2
+    score: 6.4
+    severity: MEDIUM
+    target: ""
+    title: 'krb5: integer overflow vulnerabilities in PAC parsing'
+    vulnerabilityID: CVE-2022-42898
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.18.3-6+deb11u2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2004-0971
+    resource: libgssapi-krb5-2
+    severity: LOW
+    target: ""
+    title: security flaw
+    vulnerabilityID: CVE-2004-0971
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.18.3-6+deb11u2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2018-5709
+    resource: libgssapi-krb5-2
+    score: 6.3
+    severity: LOW
+    target: ""
+    title: 'krb5: integer overflow in dbentry->n_key_data in kadmin/dbutil/dump.c'
+    vulnerabilityID: CVE-2018-5709
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.1-3.1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2017-9937
+    resource: libjbig0
+    score: 3.3
+    severity: LOW
+    target: ""
+    title: 'libtiff: memory malloc failure in tif_jbig.c could cause DOS.'
+    vulnerabilityID: CVE-2017-9937
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1:2.0.6-4
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-46822
+    resource: libjpeg62-turbo
+    score: 5.5
+    severity: MEDIUM
+    target: ""
+    title: 'libjpeg-turbo: heap buffer overflow in get_word_rgb_row() in rdppm.c'
+    vulnerabilityID: CVE-2021-46822
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.18.3-6+deb11u2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-42898
+    resource: libk5crypto3
+    score: 6.4
+    severity: MEDIUM
+    target: ""
+    title: 'krb5: integer overflow vulnerabilities in PAC parsing'
+    vulnerabilityID: CVE-2022-42898
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.18.3-6+deb11u2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2004-0971
+    resource: libk5crypto3
+    severity: LOW
+    target: ""
+    title: security flaw
+    vulnerabilityID: CVE-2004-0971
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.18.3-6+deb11u2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2018-5709
+    resource: libk5crypto3
+    score: 6.3
+    severity: LOW
+    target: ""
+    title: 'krb5: integer overflow in dbentry->n_key_data in kadmin/dbutil/dump.c'
+    vulnerabilityID: CVE-2018-5709
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.18.3-6+deb11u2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-42898
+    resource: libkrb5-3
+    score: 6.4
+    severity: MEDIUM
+    target: ""
+    title: 'krb5: integer overflow vulnerabilities in PAC parsing'
+    vulnerabilityID: CVE-2022-42898
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.18.3-6+deb11u2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2004-0971
+    resource: libkrb5-3
+    severity: LOW
+    target: ""
+    title: security flaw
+    vulnerabilityID: CVE-2004-0971
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.18.3-6+deb11u2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2018-5709
+    resource: libkrb5-3
+    score: 6.3
+    severity: LOW
+    target: ""
+    title: 'krb5: integer overflow in dbentry->n_key_data in kadmin/dbutil/dump.c'
+    vulnerabilityID: CVE-2018-5709
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.18.3-6+deb11u2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-42898
+    resource: libkrb5support0
+    score: 6.4
+    severity: MEDIUM
+    target: ""
+    title: 'krb5: integer overflow vulnerabilities in PAC parsing'
+    vulnerabilityID: CVE-2022-42898
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.18.3-6+deb11u2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2004-0971
+    resource: libkrb5support0
+    severity: LOW
+    target: ""
+    title: security flaw
+    vulnerabilityID: CVE-2004-0971
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.18.3-6+deb11u2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2018-5709
+    resource: libkrb5support0
+    score: 6.3
+    severity: LOW
+    target: ""
+    title: 'krb5: integer overflow in dbentry->n_key_data in kadmin/dbutil/dump.c'
+    vulnerabilityID: CVE-2018-5709
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.4.57+dfsg-3+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2015-3276
+    resource: libldap-2.4-2
+    severity: LOW
+    target: ""
+    title: 'openldap: incorrect multi-keyword mode cipherstring parsing'
+    vulnerabilityID: CVE-2015-3276
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.4.57+dfsg-3+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2017-14159
+    resource: libldap-2.4-2
+    score: 4.4
+    severity: LOW
+    target: ""
+    title: 'openldap: Privilege escalation via PID file manipulation'
+    vulnerabilityID: CVE-2017-14159
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.4.57+dfsg-3+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2017-17740
+    resource: libldap-2.4-2
+    score: 5.9
+    severity: LOW
+    target: ""
+    title: 'openldap: contrib/slapd-modules/nops/nops.c attempts to free stack buffer
+      allowing remote attackers to cause a denial of service'
+    vulnerabilityID: CVE-2017-17740
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.4.57+dfsg-3+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2020-15719
+    resource: libldap-2.4-2
+    score: 4.2
+    severity: LOW
+    target: ""
+    title: 'openldap: Certificate validation incorrectly matches name against CN-ID'
+    vulnerabilityID: CVE-2020-15719
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.36.1-8+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-0563
+    resource: libmount1
+    score: 5.5
+    severity: LOW
+    target: ""
+    title: 'util-linux: partial disclosure of arbitrary files in chfn and chsh when
+      compiled with libreadline'
+    vulnerabilityID: CVE-2022-0563
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2:8.39-13
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2017-11164
+    resource: libpcre3
+    score: 3.3
+    severity: LOW
+    target: ""
+    title: 'pcre: OP_KETRMAX feature in the match function in pcre_exec.c'
+    vulnerabilityID: CVE-2017-11164
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2:8.39-13
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2017-16231
+    resource: libpcre3
+    score: 5.5
+    severity: LOW
+    target: ""
+    title: 'pcre: self-recursive call in match() in pcre_exec.c leads to denial of
+      service'
+    vulnerabilityID: CVE-2017-16231
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2:8.39-13
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2017-7245
+    resource: libpcre3
+    score: 3.7
+    severity: LOW
+    target: ""
+    title: 'pcre: stack-based buffer overflow write in pcre32_copy_substring'
+    vulnerabilityID: CVE-2017-7245
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2:8.39-13
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2017-7246
+    resource: libpcre3
+    score: 3.7
+    severity: LOW
+    target: ""
+    title: 'pcre: stack-based buffer overflow write in pcre32_copy_substring'
+    vulnerabilityID: CVE-2017-7246
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2:8.39-13
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2019-20838
+    resource: libpcre3
+    score: 7.5
+    severity: LOW
+    target: ""
+    title: 'pcre: Buffer over-read in JIT when UTF is disabled and \X or \R has fixed
+      quantifier greater than 1'
+    vulnerabilityID: CVE-2019-20838
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.6.37-3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2019-6129
+    resource: libpng16-16
+    score: 3.3
+    severity: LOW
+    target: ""
+    title: 'libpng: memory leak of png_info struct in pngcp.c'
+    vulnerabilityID: CVE-2019-6129
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.6.37-3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-4214
+    resource: libpng16-16
+    score: 5.5
+    severity: LOW
+    target: ""
+    title: 'libpng: hardcoded value leads to heap-overflow'
+    vulnerabilityID: CVE-2021-4214
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 3.1-1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-36084
+    resource: libsepol1
+    score: 3.3
+    severity: LOW
+    target: ""
+    title: 'libsepol: use-after-free in __cil_verify_classperms()'
+    vulnerabilityID: CVE-2021-36084
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 3.1-1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-36085
+    resource: libsepol1
+    score: 3.3
+    severity: LOW
+    target: ""
+    title: 'libsepol: use-after-free in __cil_verify_classperms()'
+    vulnerabilityID: CVE-2021-36085
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 3.1-1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-36086
+    resource: libsepol1
+    score: 3.3
+    severity: LOW
+    target: ""
+    title: 'libsepol: use-after-free in cil_reset_classpermission()'
+    vulnerabilityID: CVE-2021-36086
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 3.1-1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-36087
+    resource: libsepol1
+    score: 3.3
+    severity: LOW
+    target: ""
+    title: 'libsepol: heap-based buffer overflow in ebitmap_match_any()'
+    vulnerabilityID: CVE-2021-36087
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.36.1-8+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-0563
+    resource: libsmartcols1
+    score: 5.5
+    severity: LOW
+    target: ""
+    title: 'util-linux: partial disclosure of arbitrary files in chfn and chsh when
+      compiled with libreadline'
+    vulnerabilityID: CVE-2022-0563
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.46.2-2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-1304
+    resource: libss2
+    score: 5.8
+    severity: HIGH
+    target: ""
+    title: 'e2fsprogs: out-of-bounds read/write via crafted filesystem'
+    vulnerabilityID: CVE-2022-1304
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.1.1n-0+deb11u3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-2097
+    resource: libssl1.1
+    score: 7.5
+    severity: MEDIUM
+    target: ""
+    title: 'openssl: AES OCB fails to encrypt some bytes'
+    vulnerabilityID: CVE-2022-2097
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.1.1n-0+deb11u3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2007-6755
+    resource: libssl1.1
+    severity: LOW
+    target: ""
+    title: 'Dual_EC_DRBG: weak pseudo random number generator'
+    vulnerabilityID: CVE-2007-6755
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.1.1n-0+deb11u3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2010-0928
+    resource: libssl1.1
+    severity: LOW
+    target: ""
+    title: 'openssl: RSA authentication weakness'
+    vulnerabilityID: CVE-2010-0928
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 247.3-7+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-3821
+    resource: libsystemd0
+    score: 5.5
+    severity: MEDIUM
+    target: ""
+    title: 'systemd: buffer overrun in format_timespan() function.'
+    vulnerabilityID: CVE-2022-3821
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 247.3-7+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2013-4392
+    resource: libsystemd0
+    severity: LOW
+    target: ""
+    title: 'systemd: TOCTOU race condition when updating file permissions and SELinux
+      security contexts'
+    vulnerabilityID: CVE-2013-4392
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 247.3-7+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2020-13529
+    resource: libsystemd0
+    score: 6.1
+    severity: LOW
+    target: ""
+    title: 'systemd: DHCP FORCERENEW authentication not implemented can cause a system
+      running the DHCP client to have its network reconfigured'
+    vulnerabilityID: CVE-2020-13529
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.16.0-2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-46848
+    resource: libtasn1-6
+    score: 5.9
+    severity: CRITICAL
+    target: ""
+    title: 'libtasn1: Out-of-bound access in ETYPE_OK'
+    vulnerabilityID: CVE-2021-46848
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-3970
+    resource: libtiff5
+    score: 9.8
+    severity: CRITICAL
+    target: ""
+    title: A vulnerability was found in LibTIFF. It has been classified as critic
+      ...
+    vulnerabilityID: CVE-2022-3970
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-2867
+    resource: libtiff5
+    score: 7.3
+    severity: HIGH
+    target: ""
+    title: 'libtiff: uint32_t underflow leads to out of bounds read and write in tiffcrop.c'
+    vulnerabilityID: CVE-2022-2867
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-2868
+    resource: libtiff5
+    score: 4.4
+    severity: HIGH
+    target: ""
+    title: 'libtiff: Invalid crop_width and/or crop_length could cause an out-of-bounds
+      read in reverseSamples16bits()'
+    vulnerabilityID: CVE-2022-2868
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-2869
+    resource: libtiff5
+    score: 7.3
+    severity: HIGH
+    target: ""
+    title: 'libtiff: tiffcrop.c has uint32_t underflow which leads to out of bounds
+      read and write in extractContigSamples8bits()'
+    vulnerabilityID: CVE-2022-2869
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-3570
+    resource: libtiff5
+    score: 5.5
+    severity: HIGH
+    target: ""
+    title: 'libtiff: heap Buffer overflows in tiffcrop.c'
+    vulnerabilityID: CVE-2022-3570
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-1354
+    resource: libtiff5
+    score: 5.5
+    severity: MEDIUM
+    target: ""
+    title: 'libtiff: heap-buffer-overflow in TIFFReadRawDataStriped() in tiffinfo.c'
+    vulnerabilityID: CVE-2022-1354
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-1355
+    resource: libtiff5
+    score: 6.6
+    severity: MEDIUM
+    target: ""
+    title: 'libtiff: stack-buffer-overflow in tiffcp.c in main()'
+    vulnerabilityID: CVE-2022-1355
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-1622
+    resource: libtiff5
+    score: 5.5
+    severity: MEDIUM
+    target: ""
+    title: 'libtiff: out-of-bounds read in LZWDecode'
+    vulnerabilityID: CVE-2022-1622
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-1623
+    resource: libtiff5
+    score: 5.5
+    severity: MEDIUM
+    target: ""
+    title: 'libtiff: out-of-bounds read in LZWDecode'
+    vulnerabilityID: CVE-2022-1623
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-2056
+    resource: libtiff5
+    score: 5.1
+    severity: MEDIUM
+    target: ""
+    title: 'LibTiff: DoS from Divide By Zero Error'
+    vulnerabilityID: CVE-2022-2056
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-2057
+    resource: libtiff5
+    score: 5.1
+    severity: MEDIUM
+    target: ""
+    title: 'LibTiff: DoS from Divide By Zero Error'
+    vulnerabilityID: CVE-2022-2057
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-2058
+    resource: libtiff5
+    score: 5.1
+    severity: MEDIUM
+    target: ""
+    title: 'LibTiff: DoS from Divide By Zero Error'
+    vulnerabilityID: CVE-2022-2058
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-34526
+    resource: libtiff5
+    score: 6.5
+    severity: MEDIUM
+    target: ""
+    title: 'libtiff: A stack overflow was discovered in the _TIFFVGetField function
+      of Tiffsplit'
+    vulnerabilityID: CVE-2022-34526
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-3597
+    resource: libtiff5
+    score: 5.5
+    severity: MEDIUM
+    target: ""
+    title: 'libtiff: out-of-bounds write in _TIFFmemcpy in libtiff/tif_unix'
+    vulnerabilityID: CVE-2022-3597
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-3598
+    resource: libtiff5
+    score: 5.5
+    severity: MEDIUM
+    target: ""
+    title: 'libtiff: out-of-bounds write in extractContigSamplesShifted24bits in tools/tiffcrop.c'
+    vulnerabilityID: CVE-2022-3598
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-3599
+    resource: libtiff5
+    score: 5.5
+    severity: MEDIUM
+    target: ""
+    title: 'libtiff: out-of-bounds read in writeSingleSection in tools/tiffcrop.c'
+    vulnerabilityID: CVE-2022-3599
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-3626
+    resource: libtiff5
+    score: 5.5
+    severity: MEDIUM
+    target: ""
+    title: 'libtiff: out-of-bounds write in _TIFFmemset in libtiff/tif_unix.c'
+    vulnerabilityID: CVE-2022-3626
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-3627
+    resource: libtiff5
+    score: 6.5
+    severity: MEDIUM
+    target: ""
+    title: LibTIFF 4.4.0 has an out-of-bounds write in _TIFFmemcpy in libtiff/tif
+      ...
+    vulnerabilityID: CVE-2022-3627
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2014-8130
+    resource: libtiff5
+    score: 3.3
+    severity: LOW
+    target: ""
+    title: 'libtiff: divide by zero in the tiffdither tool'
+    vulnerabilityID: CVE-2014-8130
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2017-16232
+    resource: libtiff5
+    score: 3.3
+    severity: LOW
+    target: ""
+    title: 'libtiff: Memory leaks in tif_open.c, tif_lzw.c, and tif_aux.c'
+    vulnerabilityID: CVE-2017-16232
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2017-17973
+    resource: libtiff5
+    score: 7.5
+    severity: LOW
+    target: ""
+    title: 'libtiff: heap-based use after free in tiff2pdf.c:t2p_writeproc'
+    vulnerabilityID: CVE-2017-17973
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2017-5563
+    resource: libtiff5
+    score: 5.3
+    severity: LOW
+    target: ""
+    title: 'libtiff: Heap-buffer overflow in LZWEncode tif_lzw.c'
+    vulnerabilityID: CVE-2017-5563
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2017-9117
+    resource: libtiff5
+    score: 3.3
+    severity: LOW
+    target: ""
+    title: 'libtiff: Heap-based buffer over-read in bmp2tiff'
+    vulnerabilityID: CVE-2017-9117
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2018-10126
+    resource: libtiff5
+    score: 3.3
+    severity: LOW
+    target: ""
+    title: 'libtiff: NULL pointer dereference in the jpeg_fdct_16x16 function in jfdctint.c'
+    vulnerabilityID: CVE-2018-10126
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-1056
+    resource: libtiff5
+    score: 5.5
+    severity: LOW
+    target: ""
+    title: Out-of-bounds Read error in tiffcrop in libtiff 4.3.0 allows attackers
+      ...
+    vulnerabilityID: CVE-2022-1056
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-1210
+    resource: libtiff5
+    score: 4.3
+    severity: LOW
+    target: ""
+    title: 'tiff: Malicious file leads to a denial of service in TIFF File Handler'
+    vulnerabilityID: CVE-2022-1210
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-2519
+    resource: libtiff5
+    score: 6.5
+    severity: LOW
+    target: ""
+    title: 'libtiff: Double free or corruption in rotateImage() function at tiffcrop.c'
+    vulnerabilityID: CVE-2022-2519
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-2520
+    resource: libtiff5
+    score: 6.5
+    severity: LOW
+    target: ""
+    title: 'libtiff: Assertion fail in rotateImage() function at tiffcrop.c'
+    vulnerabilityID: CVE-2022-2520
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-2521
+    resource: libtiff5
+    score: 6.5
+    severity: LOW
+    target: ""
+    title: 'libtiff: Invalid pointer free operation in TIFFClose() at tif_close.c'
+    vulnerabilityID: CVE-2022-2521
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 4.2.0-1+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-2953
+    resource: libtiff5
+    score: 5.5
+    severity: LOW
+    target: ""
+    title: 'libtiff: tiffcrop: heap-buffer-overflow in extractImageSection in tiffcrop.c'
+    vulnerabilityID: CVE-2022-2953
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 6.2+20201114-2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-29458
+    resource: libtinfo6
+    score: 6.1
+    severity: HIGH
+    target: ""
+    title: 'ncurses: segfaulting OOB read'
+    vulnerabilityID: CVE-2022-29458
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 6.2+20201114-2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-39537
+    resource: libtinfo6
+    score: 5.5
+    severity: LOW
+    target: ""
+    title: 'ncurses: heap-based buffer overflow in _nc_captoinfo() in captoinfo.c'
+    vulnerabilityID: CVE-2021-39537
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 247.3-7+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-3821
+    resource: libudev1
+    score: 5.5
+    severity: MEDIUM
+    target: ""
+    title: 'systemd: buffer overrun in format_timespan() function.'
+    vulnerabilityID: CVE-2022-3821
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 247.3-7+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2013-4392
+    resource: libudev1
+    severity: LOW
+    target: ""
+    title: 'systemd: TOCTOU race condition when updating file permissions and SELinux
+      security contexts'
+    vulnerabilityID: CVE-2013-4392
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 247.3-7+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2020-13529
+    resource: libudev1
+    score: 6.1
+    severity: LOW
+    target: ""
+    title: 'systemd: DHCP FORCERENEW authentication not implemented can cause a system
+      running the DHCP client to have its network reconfigured'
+    vulnerabilityID: CVE-2020-13529
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.36.1-8+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-0563
+    resource: libuuid1
+    score: 5.5
+    severity: LOW
+    target: ""
+    title: 'util-linux: partial disclosure of arbitrary files in chfn and chsh when
+      compiled with libreadline'
+    vulnerabilityID: CVE-2022-0563
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 0.6.1-2.1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2016-9085
+    resource: libwebp6
+    score: 3.3
+    severity: LOW
+    target: ""
+    title: 'libwebp: Several integer overflows'
+    vulnerabilityID: CVE-2016-9085
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.9.10+dfsg-6.7+deb11u3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2016-3709
+    resource: libxml2
+    score: 6.1
+    severity: MEDIUM
+    target: ""
+    title: 'libxml2: Incorrect server side include parsing can lead to XSS'
+    vulnerabilityID: CVE-2016-3709
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.1.34-4+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2015-9019
+    resource: libxslt1.1
+    score: 4
+    severity: LOW
+    target: ""
+    title: 'libxslt: math.random() in xslt uses unseeded randomness'
+    vulnerabilityID: CVE-2015-9019
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1:4.8.1-1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2007-5686
+    resource: login
+    severity: LOW
+    target: ""
+    title: initscripts in rPath Linux 1 sets insecure permissions for the /var/lo
+      ...
+    vulnerabilityID: CVE-2007-5686
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1:4.8.1-1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2013-4235
+    resource: login
+    score: 4.4
+    severity: LOW
+    target: ""
+    title: 'shadow-utils: TOCTOU race conditions by copying and removing directory
+      trees'
+    vulnerabilityID: CVE-2013-4235
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1:4.8.1-1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2019-19882
+    resource: login
+    score: 7.8
+    severity: LOW
+    target: ""
+    title: 'shadow-utils: local users can obtain root access because setuid programs
+      are misconfigured'
+    vulnerabilityID: CVE-2019-19882
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.46.2-2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-1304
+    resource: logsave
+    score: 5.8
+    severity: HIGH
+    target: ""
+    title: 'e2fsprogs: out-of-bounds read/write via crafted filesystem'
+    vulnerabilityID: CVE-2022-1304
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.36.1-8+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-0563
+    resource: mount
+    score: 5.5
+    severity: LOW
+    target: ""
+    title: 'util-linux: partial disclosure of arbitrary files in chfn and chsh when
+      compiled with libreadline'
+    vulnerabilityID: CVE-2022-0563
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 6.2+20201114-2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-29458
+    resource: ncurses-base
+    score: 6.1
+    severity: HIGH
+    target: ""
+    title: 'ncurses: segfaulting OOB read'
+    vulnerabilityID: CVE-2022-29458
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 6.2+20201114-2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-39537
+    resource: ncurses-base
+    score: 5.5
+    severity: LOW
+    target: ""
+    title: 'ncurses: heap-based buffer overflow in _nc_captoinfo() in captoinfo.c'
+    vulnerabilityID: CVE-2021-39537
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 6.2+20201114-2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-29458
+    resource: ncurses-bin
+    score: 6.1
+    severity: HIGH
+    target: ""
+    title: 'ncurses: segfaulting OOB read'
+    vulnerabilityID: CVE-2022-29458
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 6.2+20201114-2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2021-39537
+    resource: ncurses-bin
+    score: 5.5
+    severity: LOW
+    target: ""
+    title: 'ncurses: heap-based buffer overflow in _nc_captoinfo() in captoinfo.c'
+    vulnerabilityID: CVE-2021-39537
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.23.2-1~bullseye
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2020-36309
+    resource: nginx
+    score: 5.3
+    severity: MEDIUM
+    target: ""
+    title: ngx_http_lua_module (aka lua-nginx-module) before 0.10.16 in OpenResty
+      ...
+    vulnerabilityID: CVE-2020-36309
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.23.2-1~bullseye
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2009-4487
+    resource: nginx
+    severity: LOW
+    target: ""
+    title: 'nginx: Absent sanitation of escape sequences in web server log'
+    vulnerabilityID: CVE-2009-4487
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.23.2-1~bullseye
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2013-0337
+    resource: nginx
+    severity: LOW
+    target: ""
+    title: The default configuration of nginx, possibly 1.3.13 and earlier, uses  ...
+    vulnerabilityID: CVE-2013-0337
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.1.1n-0+deb11u3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-2097
+    resource: openssl
+    score: 5.3
+    severity: MEDIUM
+    target: ""
+    title: 'openssl: AES OCB fails to encrypt some bytes'
+    vulnerabilityID: CVE-2022-2097
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.1.1n-0+deb11u3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2007-6755
+    resource: openssl
+    severity: LOW
+    target: ""
+    title: 'Dual_EC_DRBG: weak pseudo random number generator'
+    vulnerabilityID: CVE-2007-6755
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.1.1n-0+deb11u3
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2010-0928
+    resource: openssl
+    severity: LOW
+    target: ""
+    title: 'openssl: RSA authentication weakness'
+    vulnerabilityID: CVE-2010-0928
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1:4.8.1-1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2007-5686
+    resource: passwd
+    severity: LOW
+    target: ""
+    title: initscripts in rPath Linux 1 sets insecure permissions for the /var/lo
+      ...
+    vulnerabilityID: CVE-2007-5686
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1:4.8.1-1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2013-4235
+    resource: passwd
+    score: 4.4
+    severity: LOW
+    target: ""
+    title: 'shadow-utils: TOCTOU race conditions by copying and removing directory
+      trees'
+    vulnerabilityID: CVE-2013-4235
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1:4.8.1-1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2019-19882
+    resource: passwd
+    score: 7.8
+    severity: LOW
+    target: ""
+    title: 'shadow-utils: local users can obtain root access because setuid programs
+      are misconfigured'
+    vulnerabilityID: CVE-2019-19882
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 5.32.1-4+deb11u2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2020-16156
+    resource: perl-base
+    score: 7.8
+    severity: HIGH
+    target: ""
+    title: 'perl-CPAN: Bypass of verification of signatures in CHECKSUMS files'
+    vulnerabilityID: CVE-2020-16156
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 5.32.1-4+deb11u2
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2011-4116
+    resource: perl-base
+    score: 7.5
+    severity: LOW
+    target: ""
+    title: 'perl: File::Temp insecure temporary file handling'
+    vulnerabilityID: CVE-2011-4116
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 1.34+dfsg-1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2005-2541
+    resource: tar
+    score: 7
+    severity: LOW
+    target: ""
+    title: 'tar: does not properly warn the user when extracting setuid or setgid
+      files'
+    vulnerabilityID: CVE-2005-2541
+  - class: ""
+    fixedVersion: ""
+    installedVersion: 2.36.1-8+deb11u1
+    links: []
+    primaryLink: https://avd.aquasec.com/nvd/cve-2022-0563
+    resource: util-linux
+    score: 5.5
+    severity: LOW
+    target: ""
+    title: 'util-linux: partial disclosure of arbitrary files in chfn and chsh when
+      compiled with libreadline'
+    vulnerabilityID: CVE-2022-0563
