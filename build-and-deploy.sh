@@ -5,11 +5,13 @@ set -x
 set -e
 
 IMAGE_NAME="report-operator"
-IMAGE_TAG="0.1.2"
+IMAGE_TAG="0.1.9"
 DOCKER_USERNAME="smigula"
 DOCKER_REGISTRY="localhost:5000"
 NAMESPACE="trivy-operator"
-S3_BUCKET=mitchmurphy-trivy-report
+AWS_REGION=${AWS_DEFAULT_REGION}
+AWS_PROFILE=trivy-operator-profile
+S3_BUCKET="mitchmurphy-trivy-reports"
 
 # make generate
 # make manifests
@@ -20,7 +22,7 @@ kustomize edit set namespace $NAMESPACE
 kustomize edit set image controller=${DOCKER_REGISTRY}/${DOCKER_USERNAME}/${IMAGE_NAME}:v${IMAGE_TAG}
 cp manager.yaml manager.yaml.bak
 # either set these variables in this file or it will default to using those from the environment
-sed -e "s|_AWS_DEFAULT_REGION_|${AWS_DEFAULT_REGION}|g" -i manager.yaml
+sed -e "s|_AWS_DEFAULT_REGION_|${AWS_REGION}|g" -i manager.yaml
 sed -e "s|_AWS_ACCESS_KEY_ID_|${AWS_ACCESS_KEY_ID}|g" -i manager.yaml
 sed -e "s|_AWS_SECRET_ACCESS_KEY_|${AWS_SECRET_ACCESS_KEY}|g" -i manager.yaml
 sed -e "s|_S3_BUCKET_|${S3_BUCKET}|g" -i manager.yaml
@@ -31,10 +33,8 @@ kustomize edit set namespace $NAMESPACE
 cd ../..
 
 # For ECR
-ECR_REGION=us-gov-east-1
-ECR_PROFILE=trivy-operator-profile
-ECR_REGISTRY=$DOCKER_REGISTRY
-# make ecr-login ECR_PROFILE=$ECR_PROFILE ECR_REGION=$ECR_REGION ECR_REGISTRY=$ECR_REGISTRY
+ECR_REGISTRY="${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com"
+# make ecr-login AWS_PROFILE=$AWS_PROFILE AWS_REGION=$AWS_REGION ECR_REGISTRY=$ECR_REGISTRY
 
 # If you need to change the host or username, please pass in to make
 make docker-build VERSION=${IMAGE_TAG}

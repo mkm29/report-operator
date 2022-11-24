@@ -47,6 +47,34 @@ If you are editing the API definitions, generate the manifests such as CRs or CR
 make manifests
 ```
 
+### Modify CRD
+
+You must add the `processed` boolean to the `VulnerabilityReport` CRD. This is used to determine if the report has already been processed or not.
+
+```yaml
+additionalPrinterColumns:
+  ...
+  - description: Has report been processed
+    name: processed
+    jsonPath: .report.processed
+    priority: 1
+    type: boolean
+  schema.properties.report:
+    ...
+    processed:
+      description: Whether the report been processed and uploaded to S3
+      type: boolean
+```
+
+For this either perform:
+
+* `kubectl edit crd/vulnerabilityreports.aquasecurity.github.io`
+* `kubectl patch`
+* Kustomize:
+  * Edit `config/crd/bases/aquasecurity.github.io_vulnerabilityreports.yaml`
+  * Run `make manifests`
+  * `kubectl apply -f config/crd/aquasecurity.github.io_vulnerabilityreports.yaml`.
+
 **NOTE:** Run `make --help` for more information on all potential `make` targets
 
 More information can be found via the [Kubebuilder Documentation](https://book.kubebuilder.io/introduction.html)
