@@ -6,4 +6,4 @@ namespace: trivy-operator
 images:
 - name: controller
   newName: localhost:5000/smigula/report-operator
-  newTag: v0.1.2
+  newTag: v0.1.9
