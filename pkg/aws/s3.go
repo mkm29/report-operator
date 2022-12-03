@@ -53,16 +53,17 @@ func (c *AWSClient) Upload(key string, value interface{}) error {
 	}
 
 	// marshall value into byte string
-	p, err := json.MarshalIndent(value, "", "  ")
+	p, err := json.Marshal(value)
 	if err != nil {
 		log.Fatal(err)
 		return err
 	}
 	// Upload the file to S3.
 	res, err := c.S3.PutObject(&s3.PutObjectInput{
-		Bucket: aws.String(bucket),
-		Key:    aws.String(key),
-		Body:   aws.ReadSeekCloser(bytes.NewReader(p)),
+		Bucket:      aws.String(bucket),
+		Key:         aws.String(key),
+		ContentType: aws.String("application/json"),
+		Body:        aws.ReadSeekCloser(bytes.NewReader(p)),
 	})
 	if err != nil {
 		log.Fatalf("Unable to upload %q to %q, %v", key, bucket, err)
