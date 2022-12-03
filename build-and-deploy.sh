@@ -5,13 +5,15 @@ set -x
 set -e
 
 IMAGE_NAME="report-operator"
-IMAGE_TAG="0.1.9"
+IMAGE_TAG="0.1.11"
 DOCKER_USERNAME="smigula"
 DOCKER_REGISTRY="localhost:5000"
 NAMESPACE="trivy-operator"
 AWS_REGION=${AWS_DEFAULT_REGION}
 AWS_PROFILE=trivy-operator-profile
 S3_BUCKET="mitchmurphy-trivy-reports"
+AWS_ACCESS_KEY_ID="<redacted>"
+AWS_SECRET_ACCESS_KEY="<redacted>"
 
 # make generate
 # make manifests
