@@ -5,15 +5,16 @@ set -x
 set -e
 
 IMAGE_NAME="report-operator"
-IMAGE_TAG="0.1.15"
+IMAGE_TAG="0.1.24"
 DOCKER_USERNAME="smigula"
 DOCKER_REGISTRY="localhost:5000"
 NAMESPACE="trivy-operator"
 AWS_REGION=${AWS_DEFAULT_REGION}
 AWS_PROFILE=trivy-operator-profile
-S3_BUCKET="mitchmurphy-trivy-report"
-# extract access key from ~./aws/credentials
-# AWS_ACCESS_KEY_ID=$(grep aws_access_key_id ~/.aws/credentials | awk '{print $3}')
+S3_BUCKET="mitchmurphy-trivy-reports"
+CREDS=`./get_aws_creds.py`
+AWS_ACCESS_KEY_ID=`echo $CREDS | cut -d',' -f1`
+AWS_SECRET_ACCESS_KEY=`echo $CREDS | cut -d',' -f1`
 
 # make generate
 # make manifests
@@ -46,7 +47,6 @@ make docker-push VERSION=${IMAGE_TAG}
 kustomize build config/default | kubectl apply -f -
 #make deploy #IMG=${img} docker_registry=${docker_registry} DOCKER_USERNAME=${docker_username} TAG=${tag}
 
-# kubectl apply -f config/samples/cache_v1alpha1_memcached.yaml
 # reset manager.yaml
 rm config/manager/manager.yaml
 mv config/manager/manager.yaml.bak config/manager/manager.yaml
